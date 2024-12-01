@@ -171,7 +171,7 @@ const CreatePost = () => {
           <textarea
             rows="25"
             className="intro"
-            placeholder="POST INTRO..... (Must contain at least 250 characters!)"
+            placeholder="Intro Text"
             value={intro}
             onChange={(e) => setIntro(e.target.value)}
           />
