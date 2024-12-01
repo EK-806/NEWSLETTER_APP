@@ -14,7 +14,7 @@ import { isAuthenticated, isAuthorized } from "../middlewares/auth.js";
 
 const router = express.Router();
 
-router.post("/create", isAuthenticated, isAuthorized("Author"), createPost);
+router.post("/post", isAuthenticated, isAuthorized("Author"), createPost);
 router.delete(
     "/delete/:id",
     isAuthenticated,
