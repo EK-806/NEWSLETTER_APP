@@ -5,7 +5,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 
 const Register = () => {
-  const [name, setName] = useState("");
+  const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
@@ -30,7 +30,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("name", name);
+    formData.append("userName", userName);
     formData.append("email", email);
     formData.append("phone", phone);
     formData.append("password", password);
@@ -48,7 +48,7 @@ const Register = () => {
           },
         }
       );
-      setName("");
+      setUserName("");
       setEmail("");
       setPassword("");
       setPhone("");
@@ -75,8 +75,8 @@ const Register = () => {
             <input
               type="text"
               placeholder="UserName"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
             />
           </div>
           <div>
@@ -140,6 +140,10 @@ const Register = () => {
         </form>
       </section>
     </article>
+  );
+};
+
+export default Register;
   );
 };
 
