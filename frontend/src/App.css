@@ -682,7 +682,6 @@ nav .btns .dark-mode {
         width: 100%;
     }
 }
-
 .search-icon {
     margin-right: 10px;
     cursor: pointer;
@@ -1400,6 +1399,10 @@ footer .container:last-child .links a svg {
     left: 50%;
     transform: translateX(15%);
 }
+.create-post form input::file-selector-button:hover {
+    transition: 0.3s;
+    background: #1e40af;
+}
 .create-post form .create-btn {
     padding: 8px 0;
     width: 320px;
@@ -1534,14 +1537,16 @@ footer .container:last-child .links a svg {
     gap: 7px;
     position: relative;
 }
-.auth-form form div .avatar {
-    width: 75px;
-    height: 75px;
-    border-radius: 100%;
+.auth-form form div .ProfilePicturePlaceHolder {
+    width: 70px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
 }
-.auth-form form div .avatar img {
+.auth-form form div .ProfilePicturePlaceHolder img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .auth-form form div input::file-selector-button {
     width: 100%;
@@ -1550,7 +1555,11 @@ footer .container:last-child .links a svg {
     font-weight: 700;
     color: #fff;
     background: #2563eb;
-    transition: 0.3s;
+    font-weight: 700;
+    border-radius: 8px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .auth-form form div input::file-selector-button:hover {
     transition: 0.3s;
@@ -1588,6 +1597,7 @@ footer .container:last-child .links a svg {
     color: #1e40af;
     transition: 0.3s;
 }
+
 @media (max-width: 425px) {
     .auth-form form p {
         flex-direction: column;
@@ -1790,6 +1800,10 @@ footer .container:last-child .links a svg {
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 15px;
+}
+.update-post input::file-selector-button:hover {
+    transition: 0.3s;
+    background: #1e40af;
 }
 .update-post form .update-btn {
     padding: 8px 0;
